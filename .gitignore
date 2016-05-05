@@ -1,4 +1,3 @@
-/target
 /.idea
 *.iml
 # Created by .ignore support plugin (hsz.mobi)
@@ -9,6 +8,8 @@
 .mtj.tmp/
 
 # Package Files #
+*/target
+target
 *.jar
 *.war
 *.ear

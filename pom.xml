@@ -5,7 +5,12 @@
     <groupId>io.goudai</groupId>
     <artifactId>goudai-sso</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>sso-client</module>
+        <module>sso-server</module>
+        <module>sso-storage</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>goudai-sso</name>
     <url>http://maven.apache.org</url>
@@ -64,19 +69,17 @@
                 </configuration>
             </plugin>
             <plugin>
-            <artifactId>maven-source-plugin</artifactId>
-            <version>2.4</version>
-            <configuration>
-                <attach>true</attach>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>install</phase>
-                    <goals>
-                        <goal>jar-no-fork</goal>
-                    </goals>
-                </execution>
-            </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
